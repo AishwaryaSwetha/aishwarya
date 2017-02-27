@@ -1,0 +1,122 @@
+﻿<html>
+<head>
+<title>registration</title>
+<script>
+function uvalid()
+{
+uname.innerTexts="enter the username";
+}
+function.pvalid()
+{
+var v1=new regexp("^[\\w]{6,}$");
+var in1=document.f.login.value;
+var elements ="";
+if(!v1.test(in.1)))
+{
+uname.innerTexts="username should contain 6 chars":
+}
+else
+{
+uname.innerTexts="";
+}
+pass.innerTexts="enter the password";
+}
+function evalid()
+{
+var v2=new regexp("^[\\w]{6, }$");
+var in2=document.f.password.value;
+if(!(v2.test(in2)))
+pass.innerTexts="password should contain atleast 6 chars";
+else
+pass.innerTexts="";
+email.innerTexts="enter the email";
+}
+function phvalid()
+{
+var v3=new regExp("^[\\w]+@[\\w]+.com$");
+var in3=document.f.email.value;
+if(!(v3.test(in3)))
+email.innertext="email should be in the form name@domain.com";
+else
+email.innertext="";
+ph.innertext="enter the phone number";
+}
+function pnvalid()
+{
+var v4=new regexp("^[\\d]{10}$");
+var in4=document.f.phonenum.value;
+if(!(v4.test(in4)))
+ph.innertext="phonenumber should contains 10 digits";
+else
+ph.innertexts="";
+}
+</script>
+</head>
+<body>
+<center>
+<form name=f>
+<table align=center>
+<caption align=left>registration</caption>
+<tr>
+<td>username</td>
+<td><input type=textname=login onfocus=uvalid()></td>
+<td><p id="uname"></p></td>
+</tr>
+<tr>
+<td>password</td>
+<td><input type=password name=password onfocus=pvalid()></td>
+<td>< pid="pass"></p></td>
+</tr>
+<tr>
+<td>email id:</td>
+<td><input type=textname=email onfocus=evalid()></td>
+<td> <p id="email"></p></td>
+</tr>
+<tr>
+<td> phone number:</td>
+<td><input type=text name=phonenum onfocus=phvalid() onblur=pnvalid()>
+<td><p id="ph"></p></td>
+</tr>
+<tr>
+<td>sex</td>
+<td><input type=radio name=sex value="male">male</td>
+<td><input type=radio name=sex value="female">female</td>
+</tr>
+<tr>
+<td> date of birth</td>
+<td> date<select><option>1</option><option>2</option><option>3</option><option>4</option>
+</select>
+</td>
+<td>
+month<select>
+<option>1</option><option>2</option><option>3</option><option>4</option>
+</select>
+</td>
+<td>
+year<select><option>1988</option>2007</option><option>2008</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>languages</td>
+</tr>
+<tr>
+<td></td>
+<td><input type=checkbox name=1group>telugu</td>
+<td><input type=checkbox name1group>hindi</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><input type=checkbox name=1group>english</td>
+<td><input type=checkbox name=1group>tamil</td></tr>
+<tr>
+<td>address</td><td><textarea rows=5 cols=10></textarea.</td></tr>
+<tr>
+<td><input type=button value="submit"></td>
+<td><input type=reset value="reset"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

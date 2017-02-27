@@ -1,0 +1,66 @@
+#include<stdio.h>
+main()
+{
+int a[][],t=0,i,j,x,n,p,o;
+printf("enter the no of test cases:");
+scanf("%d",&t);
+printf("enter the no of elemets in array:");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+for(j=0;j<n;j++)
+{
+printf("enter the array elements:")
+scanf("%d",&x);
+}
+}
+while(!t)
+{
+printf("enter the no of obstacles");
+scanf("%d",&o);
+for(i=0;i<n;i++)
+{
+for(j=0;j<n;j++)
+{
+printf("enter the position of obstacles:");
+scanf("%d%d",&a[i][j]);
+a[i][j]=0;
+}
+}
+for(i=0;i<n;i++)
+{
+for(j=0;j<n;j++)
+{
+printf("array elemets are:%d",x);
+}
+}
+p=a[0][0];
+while(p!=0)
+{
+for(i=0;i<n;i++)
+{
+for(j=0;j<n;j++)
+{
+if(a[i+1][j]!=0)
+{
+p=a[i+1][j];
+printf("%d",p);
+}
+else if(a[i+1][j-1]!=0)
+{
+p=a[i+1][j-1];
+printf("%d",p);
+}
+else
+{
+p=a[i+1][j+1];
+printf("%d",p);
+}
+}
+}
+}
+printf("max=a[%d][3]",i);
+t++;
+}
+}
+

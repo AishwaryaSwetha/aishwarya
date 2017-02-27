@@ -1,0 +1,36 @@
+﻿<html>
+<head>
+<title>countries&capitals</title>
+</head>
+<form>
+countries:<select id="t" onchange=capital()>
+<option>choosecountry</option>
+<option value="1">india</option>
+<option value="2">pakistan</option>
+<option value="3">america</option>
+<option value="4">china</option>
+<option value="5">australia</option>
+</select><br>
+capital:<input type="text" id="t1" value="">
+</form>
+<script>
+function capital()
+{
+var x=document.getElementById("t").value;
+switch(x)
+{
+case "1":document.getElementById("t").value="delhi";
+break;
+case "2":document.getElementById("t").value="karachi";
+break;
+case "3":document.getElementById("t").value="washington";
+break;
+case "4":document.getElementById("t").value="beijing";
+break;
+case "5":document.getElementById("t").value="sydney";
+break;
+default:alert("choose");
+break;
+}
+</script>
+</html>

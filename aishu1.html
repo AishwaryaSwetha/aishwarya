@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+<title>registration</title>
+<script type="text/javascript">
+function validate()
+{
+var c1=new regexp("^[\\w]{6,}$");
+var c2=new regexp("^[\\w]{6,}$");
+var c3=new regexp("^[\\w]+@[\\w]+.com$");
+var c4=new regexp("^[\\d]{10}$");
+var name=document.f.user.value;
+var pwd=document.f.pwd.value;
+var email=document.f.email.value;
+var phone=document.f.phone.value;
+var error="";
+if(!name.match(c1))
+{
+error+="should be min of 6 char\n"
+}
+if(!pwd.match(c2))
+{
+error+="should be min of 6 char\n"
+}
+if(!pwd.match(c3))
+{
+error+="should be of format name@domain.com\n"
+}
+if(!phone.match(c4))
+{
+error+="should be of 10 digits"
+}
+window.alert(error);
+}
+</script>
+</head>
+<body bgcolor=#7D9EC0>
+<center>
+<form name=f>
+<table align=center border=0 width=65% height=100%>
+<caption align=center>
+registration form </caption>
+<tr>
+<td>username:</td>
+<td><input type:text name=user></td>
+</td>
+</tr>
+<tr>
+<td>password</td>
+<td><input type=password name=pwd></td>
+</tr>
+<tr>
+<td>email id:</td>
+<td><input type=text name=email></td>
+</tr>
+<tr>
+<td>phone number</td>
+<td><input type=text name=phone></td>
+<td><p id="ph"></p></td>
+</tr>
+
+<tr>
+<td><input type=button value="submit" onclick=validate()></td>
+<td><p id="ph"></p></td>
+</tr>
+<tr>
+<td><input type=button value="submit" onclick=validate()></td>
+<td><input type=reset value="reset"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
