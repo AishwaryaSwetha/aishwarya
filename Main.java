@@ -1,24 +1,40 @@
-package com.company;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
+    public class Main {
 
-public class Main {
+        public static void main(String[] args) {
+            StudentArrayOperation studentOps = new StudentGroup(100);
 
-    public static void main(String[] args) {
+            SimpleDateFormat formatter=new SimpleDateFormat("dd/MM/yyyy");
+            formatter.getCalendar().getTime();
+            Date parsedDate = null;
+            try {
+                parsedDate = formatter.parse("16/09/2018");
+            }catch(Exception e){
 
-        Myrectangle rec = new Myrectangle(10, 5);
-        Mycircle cir = new Mycircle(4);
-        List<Ishape> myshapelist = new ArrayList<>();
-        myshapelist.add(rec);
-        myshapelist.add(cir);
-        for (Ishape shape : myshapelist) {
-            System.out.println("area is " + shape.getArea() + "perimeter is" + shape.getPerimeter());
+            }
+            Student student = new Student(1,"Aishwarya Swetha",parsedDate,47);
+
+
+            studentOps.add();
+            studentOps.addFirst();
+            studentOps.addLast();
+            studentOps.bubbleSort();
+            studentOps.getBetweenBirthDates();
+            studentOps.getStudent();
+            studentOps.getNearBirthDate();
+            studentOps.getByBirthDate();
+            studentOps.setStudents();
+            studentOps.setStudent();
+
+
+
 
         }
-        Ishape nextshape = new Myrectangle(10, 30);
-        System.out.println("area is " + nextshape.getArea() + "perimeter is" + nextshape.getPerimeter());
-
 
     }
-    }
+
+
+
 
